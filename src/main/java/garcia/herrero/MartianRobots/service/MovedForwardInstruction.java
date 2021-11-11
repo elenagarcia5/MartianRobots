@@ -8,7 +8,7 @@ import garcia.herrero.MartianRobots.model.Orientation;
 import garcia.herrero.MartianRobots.model.Robot;
 
 @Component
-public class MovedForwardInstruction implements Instruction {
+public class MovedForwardInstruction implements IInstruction {
 	
 	@Override
 	public void apply(Robot robot) {

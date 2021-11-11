@@ -2,9 +2,9 @@ package garcia.herrero.MartianRobots.dto;
 
 import java.util.List;
 
-public class MartianRobotINPUT {
+public class MartianRobotInput {
 
-	List<String> lines;
+	private List<String> lines;
 
 	public List<String> getLines() {
 		return lines;
@@ -14,3 +14,4 @@ public class MartianRobotINPUT {
 		this.lines = lines;
 	}
 }
+

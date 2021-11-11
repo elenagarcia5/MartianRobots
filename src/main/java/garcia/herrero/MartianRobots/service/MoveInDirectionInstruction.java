@@ -3,7 +3,7 @@ package garcia.herrero.MartianRobots.service;
 import garcia.herrero.MartianRobots.model.Orientation;
 import garcia.herrero.MartianRobots.model.Robot;
 
-public abstract class MoveInDirectionInstruction implements Instruction {
+public abstract class MoveInDirectionInstruction implements IInstruction {
 
 	@Override
 	public void apply(Robot robot) {

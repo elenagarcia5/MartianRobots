@@ -2,7 +2,7 @@ package garcia.herrero.MartianRobots.service;
 
 import garcia.herrero.MartianRobots.model.Robot;
 
-public interface Instruction {
+public interface IInstruction {
 
 	public void apply(Robot robot);
 }
