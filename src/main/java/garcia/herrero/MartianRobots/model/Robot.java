@@ -44,9 +44,9 @@ public class Robot {
         this.currentPosition.setOrientation(Orientation.valueOf(positionInfo[2]));
     }
 
-    public void printPosition(){
-        System.out.println(StringUtils.join(Arrays.asList(currentPosition.getCoordinate().getX(),currentPosition.getCoordinate().getY(),
-                        currentPosition.getOrientation().name(), isOnMars ? "" : "LOST"), " "));
+    public String getPositionAsString(){
+        return StringUtils.join(Arrays.asList(currentPosition.getCoordinate().getX(),currentPosition.getCoordinate().getY(),
+                        currentPosition.getOrientation().name(), isOnMars ? "" : "LOST"), " ");
     }
 
 }

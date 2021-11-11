@@ -12,7 +12,9 @@ public class Board {
     private static Board board;
 
     public static void createBoard(int columns, int rows) {
-        board = new Board(columns, rows);
+    	if(board != null){
+    		board = new Board(columns, rows);
+    	}
     }
 
     public static Board getBoard() {
