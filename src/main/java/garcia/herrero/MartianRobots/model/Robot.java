@@ -36,17 +36,10 @@ public class Robot {
         this.isOnMars = isOnMars;
     }
 
-    public void createPositionFromCommandLine(String commandLineInfo) {
-        String[] positionInfo = commandLineInfo.split(" ");
-        this.currentPosition = new Position();
-        this.currentPosition
-                .setCoordinate(Coordinate.of(Integer.valueOf(positionInfo[0]), Integer.valueOf(positionInfo[1])));
-        this.currentPosition.setOrientation(Orientation.valueOf(positionInfo[2]));
-    }
-
     public String getPositionAsString(){
         return StringUtils.join(Arrays.asList(currentPosition.getCoordinate().getX(),currentPosition.getCoordinate().getY(),
                         currentPosition.getOrientation().name(), isOnMars ? "" : "LOST"), " ");
     }
+    
 
 }

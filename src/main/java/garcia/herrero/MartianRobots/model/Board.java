@@ -11,18 +11,13 @@ public class Board {
 
     private static Board board;
 
-    public static void createBoard(int columns, int rows) {
-    	if(board != null){
-    		board = new Board(columns, rows);
-    	}
+    public static void createBoardFromInput(String commandLineInfo) {
+    	String[] columnsAndRows = commandLineInfo.split(" ");
+    	board = new Board(Integer.valueOf(columnsAndRows[0]), Integer.valueOf(columnsAndRows[1]));
     }
 
     public static Board getBoard() {
-        if(  board == null){
-            board = new Board(0, 0);
-        }
         return board;
-        
     }
 
     private Board(int columns, int rows) {
