@@ -1,7 +1,8 @@
 package garcia.herrero.MartianRobots.validation;
 
+import java.util.Arrays;
+
 import org.apache.commons.lang3.StringUtils;
-import org.assertj.core.util.Arrays;
 import org.springframework.stereotype.Component;
 
 import garcia.herrero.MartianRobots.model.Instruction;
@@ -19,6 +20,6 @@ public class RobotInstructionsValidator implements ICommandLineValidator {
 		}
 		
 		return Arrays.asList(line.split(StringUtils.EMPTY)).stream()
-				.allMatch(letter -> Arrays.asList(Instruction.values()).contains(letter));
+				.allMatch(letter -> Instruction.existValue(letter));
 	}
 }

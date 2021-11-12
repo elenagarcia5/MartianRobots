@@ -1,5 +1,8 @@
 package garcia.herrero.MartianRobots.model;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public enum Orientation {
 
     N("W", "E"),
@@ -21,6 +24,10 @@ public enum Orientation {
 
     public Orientation getRigth() {
         return Orientation.valueOf(rigth);
+    }
+    
+    public static boolean existValue(String value){
+    	 return Arrays.asList(values()).stream().map(element -> element.name()).collect(Collectors.toList()).contains(value);
     }
 
 }
