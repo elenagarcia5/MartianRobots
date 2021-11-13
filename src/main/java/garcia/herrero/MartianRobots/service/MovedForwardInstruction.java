@@ -32,7 +32,6 @@ public class MovedForwardInstruction implements IInstruction {
 		
 		if(isCoordinateWithinBounds){
 			robot.getCurrentPosition().setCoordinate(nextCoordinate);
-			robot.getHistoricalCoordinates().add(currentCoordinate);		
 		}else if(!isScentCoordinate){
 			robot.setOnMars(false);
 			board.getScentCoordinates().add(currentCoordinate);

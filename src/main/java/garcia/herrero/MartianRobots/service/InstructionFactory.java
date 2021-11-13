@@ -18,15 +18,15 @@ public class InstructionFactory {
 	@Autowired
 	private MovedForwardInstruction movedForwardInstruction;
 	
-	public IInstruction getInstructionFromCommand(String command) throws FunctionalException {
+	public IInstruction getInstructionService(Instruction instruction) throws FunctionalException {
 
-		if (Instruction.R.name().equals(command)){
+		if (Instruction.R.equals(instruction)){
 			return moveRightInstruction;
 		}
-		if (Instruction.L.name().equals(command)){
+		if (Instruction.L.equals(instruction)){
 			return moveLeftInstruction;
 		}
-		if (Instruction.F.name().equals(command)){
+		if (Instruction.F.equals(instruction)){
 			return movedForwardInstruction;
 		}
 
