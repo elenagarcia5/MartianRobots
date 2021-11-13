@@ -10,7 +10,7 @@ public class GivenMartianRobotInput<SELF extends GivenMartianRobotInput<?>> exte
 	@ProvidedScenarioState
 	MartianRobotInput martianRobotInput;
 
-	public SELF an_martian_robot_input() {
+	public SELF a_martian_robot_input() {
 		this.martianRobotInput = new MartianRobotInput();
 		return self();
 	}

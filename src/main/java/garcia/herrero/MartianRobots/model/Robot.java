@@ -36,21 +36,27 @@ public class Robot {
 						.collect(Collectors.toList());
 	}
 
-	public static Robot createRobotFromInput(Pair<String,String> commandLineInfo) {
+	public static Robot createRobotFromInput(Pair<String, String> commandLineInfo) {
 		Robot robot = new Robot();
 		robot.setCurrentPosition(Position.createPositionFromInput(commandLineInfo.getLeft()));
 		robot.setInstructions(commandLineInfo.getRight());
 		return robot;
 	}
-	
+
 	public void setInstructions(String instructions) {
 		this.instructions = instructions;
 	}
 
 	public String getPositionAsString() {
-		return StringUtils
-				.join(Arrays.asList(currentPosition.getCoordinate().getX(), currentPosition.getCoordinate().getY(),
-						currentPosition.getOrientation().name(), isOnMars ? "" : "LOST"), " ");
+		List<String> toPrint = Arrays
+				.asList(currentPosition.getCoordinate().getX(), currentPosition.getCoordinate().getY(),
+						currentPosition.getOrientation().name())
+				.stream().map(pos -> String.valueOf(pos)).collect(Collectors.toList());
+
+		if (!isOnMars) {
+			toPrint.add("LOST");
+		}
+		return StringUtils.join(toPrint, StringUtils.SPACE);
 	}
 
 }
