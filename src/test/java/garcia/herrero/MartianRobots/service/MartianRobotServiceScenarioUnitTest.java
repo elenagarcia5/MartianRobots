@@ -11,7 +11,7 @@ import garcia.herrero.MartianRobots.dto.GivenMartianRobotInput;
 import garcia.herrero.MartianRobots.error.FunctionalException;
 
 @RunWith(MockitoJUnitRunner.class)
-public class MartianRobotServiceUnitTest
+public class MartianRobotServiceScenarioUnitTest
 		extends ScenarioTest<GivenMartianRobotInput<?>, WhenMartianRobotService<?>, ThenMartianRobotService<?>> {
 
 	@Test

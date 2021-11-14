@@ -21,6 +21,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
+import org.springframework.test.web.servlet.ResultActions;
 
 import garcia.herrero.MartianRobots.service.MartinRobotsService;
 
@@ -41,8 +42,9 @@ public class MartianRobotsControllerIntegrationTest {
 
         RequestBuilder request = post("/play?lines=");
 
-        mvc.perform(request)
-        	.andExpect(status().isBadRequest())
+        final ResultActions result = mvc.perform(request) ;
+        	
+        result.andExpect(status().isBadRequest())
         	.andExpect(jsonPath("$").isNotEmpty())
         	.andExpect(content().string("{\"lines\":\"size must be between 1 and 2147483647\"}"));
 
