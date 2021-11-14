@@ -1,17 +1,17 @@
 # Matian Robots
 
 ## Product description
-Martian Robot App is a SprintBoot application that expose a REST API which allows the user to play "The Martian Robot game". For further detail about this game, go to section "The Martian Robot Game"
+Martian Robot App is a SprintBoot application that exposes a REST API which allows the user to play "The Martian Robot game". For further detail about this game, go to section "The Martian Robot Game"
 
 ## How to run the product
 
 *Prerequisites* Docker installed in the machine where the program will be run.
 
-- Chekout the code from the public repsitory https://github.com/elenagarcia5/MartianRobots
+- Chekout the code from the public repository https://github.com/elenagarcia5/MartianRobots
 - Under that directory, execute the provided script ./start.sh. This will build a docker image and start a docker container which will hold the application.
-- Once the mentioned script finishes, the application is ready to be used, to play it, two different options have been provided:
+- Once the mentioned script finishes, the application is ready to be used, to play the game, two different options have been provided:
 	- Execute the script ./runApp.sh if you want to introduce the application input data from the command line.
-	- Use our generated postMan project if you prefer to play the game by doing direct requests to our REST API
+	- Use our generated postman project if you prefer to play the game by doing direct requests to our REST API
 - To stop the application, use the provided script ./stop.sh that will stop the docker container.
 
 
