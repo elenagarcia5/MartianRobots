@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "d6e2e4f5-d054-4f58-b780-e39f05589c42",
+		"name": "MARTIAN_ROBOTS_COLLECTION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Martian_Robots_REQUEST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/play?lines=5 3,1 1 E,RFRFRFRF,3 2 N,FRRFLLFFRRFLL,0 3 W,LLFFFRFLFL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"play"
+					],
+					"query": [
+						{
+							"key": "lines",
+							"value": "5 3,1 1 E,RFRFRFRF,3 2 N,FRRFLLFFRRFLL,0 3 W,LLFFFRFLFL"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
