@@ -12,7 +12,7 @@ done
 params=""
 if [ -n "$values" ]; then
 	params="lines=${values}"
-	params=${params::-1}
+	params=${params%?} 
 fi
 
 curl -s "http://localhost:8080/play" --data-urlencode "$params"
