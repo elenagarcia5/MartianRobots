@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Lists;
 
-import garcia.herrero.MartianRobots.dto.MartianRobotInput;
+import garcia.herrero.MartianRobots.dto.MartianRobotInputDto;
 import garcia.herrero.MartianRobots.error.FunctionalException;
 import garcia.herrero.MartianRobots.model.Board;
 import garcia.herrero.MartianRobots.model.Instruction;
@@ -26,7 +26,7 @@ public class MartinRobotsService {
 	private InputValidator inputValidator;
 
 	
-	public List<String> playMartinRobot(MartianRobotInput martianRobotINPUT) throws FunctionalException{
+	public List<String> playMartinRobot(MartianRobotInputDto martianRobotINPUT) throws FunctionalException{
 
 		inputValidator.validate(martianRobotINPUT.getLines());
 		

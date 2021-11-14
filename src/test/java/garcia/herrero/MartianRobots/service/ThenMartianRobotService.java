@@ -9,7 +9,7 @@ import org.mockito.Mockito;
 import com.tngtech.jgiven.Stage;
 import com.tngtech.jgiven.annotation.ExpectedScenarioState;
 
-import garcia.herrero.MartianRobots.dto.MartianRobotInput;
+import garcia.herrero.MartianRobots.dto.MartianRobotInputDto;
 import garcia.herrero.MartianRobots.error.FunctionalException;
 
 public class ThenMartianRobotService<SELF extends ThenMartianRobotService<?>> extends Stage<SELF> {
@@ -23,9 +23,9 @@ public class ThenMartianRobotService<SELF extends ThenMartianRobotService<?>> ex
 	@ExpectedScenarioState
 	FunctionalException functionalException;
 	
-	ArgumentCaptor<MartianRobotInput> captorMartianRobotInput = ArgumentCaptor.forClass(MartianRobotInput.class);
+	ArgumentCaptor<MartianRobotInputDto> captorMartianRobotInput = ArgumentCaptor.forClass(MartianRobotInputDto.class);
 
-	MartianRobotInput martianRobotInput;
+	MartianRobotInputDto martianRobotInput;
 
 	public SELF the_playMartinRobot_method_has_been_called() throws FunctionalException {
 		Mockito.verify(martinRobotsService, Mockito.times(1)).playMartinRobot(captorMartianRobotInput.capture());

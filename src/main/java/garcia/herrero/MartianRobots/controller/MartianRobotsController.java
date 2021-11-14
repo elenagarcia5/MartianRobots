@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import garcia.herrero.MartianRobots.dto.MartianRobotInput;
+import garcia.herrero.MartianRobots.dto.MartianRobotInputDto;
 import garcia.herrero.MartianRobots.error.FunctionalException;
 import garcia.herrero.MartianRobots.service.MartinRobotsService;
 
@@ -32,7 +32,7 @@ public class MartianRobotsController {
 
 
 	@PostMapping("/play")
-	public ResponseEntity<List<String>> play(@Valid MartianRobotInput martianRobotINPUT) throws FunctionalException {
+	public ResponseEntity<List<String>> play(@Valid MartianRobotInputDto martianRobotINPUT) throws FunctionalException {
 		
 		List<String> output = martinRobotsService.playMartinRobot(martianRobotINPUT);
 

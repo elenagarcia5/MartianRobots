@@ -8,10 +8,10 @@ import com.tngtech.jgiven.annotation.ProvidedScenarioState;
 public class GivenMartianRobotInput<SELF extends GivenMartianRobotInput<?>> extends Stage<SELF> {
 
 	@ProvidedScenarioState
-	MartianRobotInput martianRobotInput;
+	MartianRobotInputDto martianRobotInput;
 
 	public SELF a_martian_robot_input() {
-		this.martianRobotInput = new MartianRobotInput();
+		this.martianRobotInput = new MartianRobotInputDto();
 		return self();
 	}
 	

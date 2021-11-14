@@ -11,7 +11,7 @@ import com.tngtech.jgiven.annotation.BeforeScenario;
 import com.tngtech.jgiven.annotation.ExpectedScenarioState;
 import com.tngtech.jgiven.annotation.ProvidedScenarioState;
 
-import garcia.herrero.MartianRobots.dto.MartianRobotInput;
+import garcia.herrero.MartianRobots.dto.MartianRobotInputDto;
 import garcia.herrero.MartianRobots.error.FunctionalException;
 import garcia.herrero.MartianRobots.validation.BoardSizeValidator;
 import garcia.herrero.MartianRobots.validation.InputValidator;
@@ -21,7 +21,7 @@ import garcia.herrero.MartianRobots.validation.RobotPositionValidator;
 public class WhenMartianRobotService<SELF extends WhenMartianRobotService<?>> extends Stage<SELF> {
 	
 	@ExpectedScenarioState
-	MartianRobotInput martianRobotInput;
+	MartianRobotInputDto martianRobotInput;
 	
 	@Spy
 	private MoveRightInstruction moveRightInstruction;

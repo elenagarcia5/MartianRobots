@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.validation.constraints.Size;
 
-public class MartianRobotInput {
+public class MartianRobotInputDto {
 
 	@Size(min = 1)
 	private List<String> lines;
